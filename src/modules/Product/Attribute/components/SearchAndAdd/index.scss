@@ -1,0 +1,62 @@
+@import 'styles/variables';
+.search-sort-filter {
+  .tools-container__admin {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0px 36px 24px 36px;
+    border-bottom: 1px solid $blue-gray-100;
+    .tools-container-admin__left {
+      display: flex;
+      align-items: center;
+      .ant-form-item {
+        margin-bottom: 0px;
+        .search-input-admin {
+          position: relative;
+          padding: 4px 4px 4px 16px;
+          border-radius: $border-radius-small;
+          border: 1px solid $blue-gray-100;
+          input {
+            border: none;
+            width: calc(289px + 65px);
+          }
+          input::placeholder {
+            color: $blue-gray-400;
+          }
+          div .clear-input-admin {
+            position: absolute;
+            left: 73%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-new-attribute-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    padding: 0px 16px 0px 16px;
+  }
+  .ant-modal-header {
+    padding: 24px 16px 16px 16px;
+    border-bottom: none;
+    border-top-left-radius: $border-radius-huge !important;
+    border-top-right-radius: $border-radius-huge !important;
+    .ant-modal-title {
+      font-weight: 600;
+      font-size: $font-size-large;
+    }
+  }
+  .ant-modal-body {
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0px 16px 0px 16px;
+  }
+}
+
+.confirm-buttom-attribute-modal {
+  margin-top: 20px;
+}

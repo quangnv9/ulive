@@ -1,0 +1,182 @@
+@import 'styles/variables';
+
+.ant-dropdown-menu.add-edit-cate__menu-wrapper {
+  padding: 16px;
+  position: absolute;
+  border-radius: 16px;
+  span.no-parent-title {
+    font-size: $font-size-normal;
+    color: $blue-gray-700;
+    padding-left: 28px;
+    cursor: pointer;
+    &.no-parent__active {
+      color: $vinivia-pink-500 !important;
+    }
+  }
+  .no-search-result {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: $font-size-normal;
+      color: $blue-gray-400;
+    }
+  }
+  span.ant-input-affix-wrapper {
+    padding: 16px;
+    border-radius: $border-radius-medium;
+  }
+  .ant-tree.select-cate-content_custom {
+    .ant-tree-list .ant-tree-list-holder {
+      height: 250px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $blue-gray-100;
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $blue-gray-300;
+        border-radius: 3px;
+      }
+    }
+    svg {
+      transition: all 0.3s ease-in-out;
+    }
+    .ant-tree-treenode {
+      padding: 4px 0px;
+      &:hover {
+        &:before {
+          border-radius: $border-radius-small;
+        }
+      }
+      &.ant-tree-treenode-switcher-open {
+        span.ant-tree-switcher.ant-tree-switcher_open {
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      span.ant-tree-title {
+        span.root-cate {
+          font-family: $font-semibold;
+          font-size: $font-size-normal;
+          color: $blue-gray-700;
+        }
+        span.cate-level-02 {
+          font-size: $font-size-normal;
+          color: $blue-gray-700;
+          font-weight: normal;
+        }
+        span.cate-item {
+          font-size: $font-size-normal;
+          color: $blue-gray-700;
+        }
+      }
+    }
+    .ant-tree-treenode.ant-tree-treenode-selected {
+      &::before {
+        content: unset;
+      }
+      span.ant-tree-title {
+        span {
+          color: $vinivia-pink-500 !important;
+        }
+      }
+    }
+  }
+}
+.ant-modal.add-edit-category-wrapper {
+  .ant-modal-content {
+    border-radius: $border-radius-large !important;
+    .ant-modal-header {
+      padding: 16px 16px 0px 16px;
+      border-radius: 16px 16px 0px 0px;
+      border-bottom: unset;
+      .ant-modal-title {
+        font-size: 18px;
+        color: $blue-gray-700;
+        font-family: $font-semibold;
+      }
+    }
+    .ant-modal-body {
+      padding: 16px !important;
+      border-radius: $border-radius-large;
+      .ant-form-item {
+        margin-bottom: 16px;
+        .ant-form-item-label {
+          label {
+            &::before {
+              content: unset !important;
+            }
+            font-size: $font-size-tiny;
+            color: $blue-gray-700;
+          }
+        }
+        .ant-form-item-control-input-content input {
+          padding: 14px;
+          border-radius: $border-radius-medium;
+        }
+      }
+      button {
+        height: 56px;
+        .wrapper-button-select-cate {
+          display: block;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: $font-size-normal;
+          color: $blue-gray-700 !important;
+          span {
+            svg {
+              transition: all 0.3s ease-in-out;
+            }
+            &.dropdown-open-icon svg {
+              transform: rotate(90deg);
+            }
+          }
+          ul.parent-selected {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0px;
+          }
+        }
+      }
+      span.note-title {
+        font-style: italic;
+        font-size: $font-size-tiny;
+        color: $blue-gray-400;
+      }
+    }
+    .ant-modal-footer {
+      border-top: unset;
+      padding: 0px 16px 16px 16px;
+      button {
+        width: 120px;
+        border-radius: $border-radius-small;
+        height: 48px;
+        font-size: $font-size-normal;
+        font-weight: 600;
+        &.ant-btn {
+          color: $vinivia-pink-500;
+          border-color: $vinivia-pink-500;
+        }
+        &.ant-btn.ant-btn-primary {
+          color: $white;
+          background: $background-gradient;
+        }
+        &[disabled] {
+          opacity: 0.5;
+        }
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

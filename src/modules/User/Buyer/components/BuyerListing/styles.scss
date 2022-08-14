@@ -1,0 +1,113 @@
+@import 'styles/variables';
+.table-paging {
+    margin-bottom: 34px;
+    .ant-table-container table>thead>tr:first-child {
+        th.ant-table-cell {
+            background-color: $blue-gray-50;
+            font-weight: bold !important;
+            font-size: $font-size-normal;
+            span[class*="ant-checkbox"] {
+                width: 22px;
+                height: 22px;
+                border-radius: 6px;
+            }
+            .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+                background-color: white !important;
+            }
+            .ant-checkbox-inner:after {
+                left: 24.5%;
+            }
+            .ant-checkbox-wrapper:hover .ant-checkbox:after,
+            span[class*="ant-checkbox"]:hover:after {
+                visibility: hidden !important;
+            }
+            .ant-checkbox-checked .ant-checkbox-inner {
+                border-color: $vinivia-pink-500 !important;
+                background-color: $vinivia-pink-500 !important;
+            }
+            .ant-checkbox:hover>span .ant-checkbox-inner {
+                border-color: $vinivia-pink-500 !important;
+            }
+            .ant-checkbox-inner {
+                border: 2px solid $blue-gray-700;
+            }
+        }
+        th:first-child {
+            border-radius: $border-radius-medium 0 0 $border-radius-medium;
+        }
+        th:last-child {
+            border-radius: 0 $border-radius-medium $border-radius-medium 0;
+        }
+    }
+    .ant-table-cell::before {
+        display: none;
+    }
+    .table-content {
+        table {
+            // css for table body
+            tbody.ant-table-tbody {
+                td.ant-table-cell {
+                    background-color: white !important;
+                    color: $blue-gray-700;
+                    font-size: $font-size-normal;
+                    span[class*="ant-checkbox"] {
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 6px;
+                    }
+                    .ant-checkbox-checked:after {
+                        border-color: white !important;
+                        border-radius: 6px;
+                    }
+                    .ant-checkbox-checked .ant-checkbox-inner {
+                        border-color: $vinivia-pink-500 !important;
+                        background-color: $vinivia-pink-500 !important;
+                    }
+                    .ant-checkbox-inner {
+                        border: 2px solid $blue-gray-700;
+                    }
+                    .ant-checkbox-inner:after {
+                        left: 24.5%;
+                    }
+                    .ant-checkbox:hover>.ant-checkbox-inner {
+                        border-color: $vinivia-pink-500 !important;
+                    }
+                    .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+                        border-color: $vinivia-pink-500 !important;
+                    }
+                    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+                        border-color: $blue-gray-200 !important;
+                        border-right-width: 1px !important;
+                        outline: 0;
+                    }
+                    .ant-select.ant-select-single.ant-select-show-arrow {
+                        width: 100%;
+                        .ant-select-selector {
+                            border-radius: $border-radius-small;
+                            height: 40px;
+                            .ant-select-selection-item {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                        .ant-select-arrow {
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        tbody tr:hover {
+            cursor: pointer;
+        }
+    }
+    // for notfound data when search
+    .ant-table.ant-table-empty {
+        .ant-table-tbody {
+            height: 50vh;
+            td.ant-table-cell {
+                border-bottom: unset;
+            }
+        }
+    }
+}

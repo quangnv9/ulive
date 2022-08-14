@@ -1,0 +1,54 @@
+.deployBranch: &deployBranch
+  - develop
+
+.Tags: &tags
+  - vops-runner
+
+.Variables: &variables 
+  ENV: dev
+
+build-develop:
+  stage: build
+  image:
+    name: quay.io/vmoteam/ci-node:v12-gitops
+  services:
+    - docker:stable-dind
+  variables:
+    <<: *variables
+  script:
+    - if [ "$CI_COMMIT_BRANCH" == "testing" ]; then ENV="testing"; fi
+    - if [ "$CI_COMMIT_BRANCH" == "staging" ]; then ENV="staging"; fi
+    - if [ "$ENV" == "dev" ]; then cp $VAR_FILE_DEV .env; fi
+    - yarn build:$ENV
+    # docker
+    - docker build -t $IMAGE_FIX -f .docker/$ENV.dockerfile .
+    - docker tag $IMAGE_FIX $IMAGE_BACKUP
+    # login aws ecr
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY_HOST
+    - docker push $IMAGE_BACKUP
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  tags: *tags
+  only: *deployBranch
+  allow_failure: false
+
+# Deployment
+deploy-develop:
+  stage: deploy
+  image:
+    name: alpine/helm:latest
+    entrypoint: [""]
+  variables:
+    <<: *variables
+  script:
+    - helm version
+    - mkdir -p ~/.kube
+    - echo -n $CONFIG | base64 -d > ~/.kube/config
+    - chmod 400 ~/.kube/config
+    - cd helm/$NAMEAPP
+    # Deploy to K8s dev
+    - helm upgrade -i $NAMEAPP ./ --set image.tag=$NAMEAPP-$ENV-$CI_COMMIT_SHORT_SHA -n default
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  tags: *tags
+  only: *deployBranch

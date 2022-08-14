@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+
+.ant-form-item.date-input-wrapper {
+  flex-direction: column;
+  margin-bottom: 10px;
+  .ant-col.ant-form-item-label {
+    @include lableInput;
+  }
+  .ant-col.ant-form-item-control {
+    .ant-picker {
+      width: 100%;
+      padding: 14px;
+      border-radius: $border-radius-medium;
+    }
+  }
+}

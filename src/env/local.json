@@ -1,0 +1,10 @@
+{
+  "authUrl": "https://api-dev.liveshopping.vinivia.dev/user/api/v1/admin/auth",
+  "apiBaseUrl": "https://api-dev.liveshopping.vinivia.dev/user/api/v1/admin",
+  "apiCityUrl": "https://api-dev.liveshopping.vinivia.dev/user/api/v1/city",
+  "apiCountryUrl": "https://api-dev.liveshopping.vinivia.dev/user/api/v1/country",
+  "apiUploadUrl": "https://api-dev.liveshopping.vinivia.dev/file/api/v1/attachment",
+  "imageUrl": "https://vinivia-liveshopping-dev.s3.us-east-2.amazonaws.com/",
+  "imageUrlTemp": "https://vinivia-liveshopping-dev-temp.s3.us-east-2.amazonaws.com/",
+  "apiShoppingBaseUrl": "https://api-dev.liveshopping.vinivia.dev/shopping"
+}

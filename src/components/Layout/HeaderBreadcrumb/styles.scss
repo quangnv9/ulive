@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+.breadcrumb {
+  span.ant-breadcrumb-link {
+    font-size: $font-size-normal;
+    color: $blue-gray-400;
+    text-transform: capitalize;
+    a {
+      color: $blue-gray-400 !important;
+    }
+  }
+  span.last-item {
+    color: $vinivia-pink-500;
+  }
+  span.first-item {
+    color: $blue-gray-400;
+  }
+}

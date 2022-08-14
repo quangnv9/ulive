@@ -1,0 +1,76 @@
+@import '../../../styles/variables';
+.user-info {
+    padding: 0 24px;
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    button {
+        height: 68px;
+        width: 100%;
+        border-radius: $border-radius-large;
+    }
+}
+
+.my-profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: $border-radius-large !important;
+    .ant-dropdown-menu-item {
+        font-size: $font-size-tiny;
+        line-height: $line-height-tiny;
+        &:hover {
+            background: $white;
+            border-radius: $border-radius-large;
+        }
+    }
+}
+
+[role='alert'] {
+    float: right;
+    font-style: italic;
+}
+
+.change-password-modal {
+    .ant-form-item-extra {
+        margin: 24px 0;
+    }
+}
+
+.bottom-input {
+    margin-bottom: 16px;
+}
+
+.ant-row.ant-form-item.ant-form-item-with-help.form-input-wrapper.ant-form-item-has-feedback.ant-form-item-has-error {
+    .ant-form-item-children-icon {
+        display: none;
+    }
+}
+
+.change-pass-form {
+    .ant-modal-footer {
+        .ant-btn.ant-btn-primary {
+            background: $background-gradient;
+            color: $white;
+            &:hover {
+                box-shadow: 0 4px 16px rgba(229, 108, 118, 0.5);
+            }
+            &:focus,
+            &:active {
+                background: $vinivia-pink-500;
+            }
+            &:active {
+                box-shadow: none;
+            }
+            &[disabled],
+            &[disabled]:hover {
+                color: $white;
+                background: $background-gradient;
+                opacity: 0.5;
+            }
+        }
+    }
+    .ant-form-item-has-feedback.ant-form-item-has-success .ant-form-item-children-icon {
+        top: 40%;
+    }
+}

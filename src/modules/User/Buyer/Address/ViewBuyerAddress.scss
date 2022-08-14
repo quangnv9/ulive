@@ -1,0 +1,76 @@
+@import 'styles/variables';
+.address-container {
+  padding: 0px 36px;
+}
+.address-card {
+  padding: 16px;
+  border-radius: $border-radius-large;
+  border: 1px solid $blue-gray-100;
+  .card-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .card-row__left {
+      display: flex;
+      align-items: center;
+      span.full-name {
+        font-size: $font-size-normal;
+        font-weight: 600;
+        color: $blue-gray-700;
+        margin-right: 12px;
+      }
+      span.default {
+        font-weight: 600;
+        color: $white;
+        padding: 4px 8px;
+        border-radius: $border-radius-tiny;
+        background: linear-gradient(225deg, #e56c76 0%, #d8528e 100%);
+        font-size: $font-size-tiny;
+      }
+    }
+    .card-row__right {
+      display: flex;
+      align-items: center;
+      span.icon {
+        display: flex;
+        cursor: pointer;
+        &.edit-icon {
+          margin-right: 24px;
+        }
+      }
+    }
+    span.card-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
+    span.card-text {
+      font-size: 16px;
+      color: $blue-gray-700;
+    }
+    .address-with-city {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .card-row__between {
+    justify-content: space-between;
+  }
+}
+
+.ant-dropdown-menu.action-menu {
+  padding: 12px 16px;
+  border-radius: $border-radius-small;
+  li.ant-dropdown-menu-item.menu-item {
+    padding: 0px;
+    font-size: 14px;
+    color: $red;
+    &:first-child {
+      margin-bottom: 10px;
+      color: $blue-gray-700;
+    }
+  }
+}

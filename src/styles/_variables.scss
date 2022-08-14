@@ -1,0 +1,74 @@
+// ================================ Fonts  ==========================================
+$font-family: 'Poppins', sans-serif;
+$font-family-itatic: 'Poppins Italic';
+$font-semibold: 'Poppins Semi Bold';
+$font-semibold-italic: 'Poppins Semi Bold Italic';
+$font-bold: 'Poppins Bold';
+$font-bold-italic: 'Poppins Bold Italic';
+
+$font-size-tiny: 12px;
+$font-size: 14px;
+$font-size-normal: 16px;
+$font-size-large: 20px;
+$font-size-body: 24px;
+$font-size-huge: 28px;
+$line-height-tiny: 18px;
+$line-height-body: 24px;
+$font-family-base: $font-family;
+$font-size-base: $font-size;
+
+// ================================ Colors ==========================================
+//vinivia-pink
+$vinivia-pink-700: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #d8528e;
+$vinivia-pink-600: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #d8528e;
+$vinivia-pink-500: #d8528c; //primary
+$vinivia-pink-400: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #d8528e;
+$vinivia-pink-300: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), #d8528e;
+$vinivia-pink-200: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #d8528e;
+$vinivia-pink-100: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #d8528e;
+//vinivia-red
+$vinivia-red-700: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #e56c76;
+$vinivia-red-600: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #e56c76;
+$vinivia-red-500: #e56c76; //primary
+$vinivia-red-400: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #e56c76;
+$vinivia-red-300: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), #e56c76;
+$vinivia-red-200: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #e56c76;
+$vinivia-red-100: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #e56c76;
+
+//dark-blue
+$dark-blue: #1b005a;
+//blue-gray
+$blue-gray-50: #f5f5f7;
+$blue-gray-100: #e7e7ec;
+$blue-gray-200: #d9d9e0;
+$blue-gray-300: #cbcbd5;
+$blue-gray-400: #a9a9ba;
+$blue-gray-700: #696984;
+$blue-gray-900: #2c2c37;
+//red
+$red: #f44336;
+//green:
+$green: #4caf50;
+//yellow
+$yellow: #ffc107;
+//gradient
+$gradient: linear-gradient(183.13deg, #e56c76 2.59%, #d8528e 97.41%);
+$background-gradient: linear-gradient(225deg, #e56c76 0%, #d8528e 100%);
+//white
+$white: #ffffff;
+//black
+$black: #000000;
+//label
+$status-active: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+  linear-gradient(0deg, #4caf50, #4caf50);
+$status-inactive: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+  linear-gradient(0deg, #ffc107, #ffc107);
+
+// ================================ Border ==========================================
+$border-radius-huge: 24px;
+$border-radius-large: 16px;
+$border-radius-medium: 12px;
+$border-radius-small: 10px;
+$border-radius-tiny: 8px;
+
+// ================================ Border ==========================================

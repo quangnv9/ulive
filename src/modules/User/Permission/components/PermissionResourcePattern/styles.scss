@@ -1,0 +1,27 @@
+@import '../../../../../styles/variables';
+.permisson-resource {
+  padding: 24px 12px 0;
+
+  .ant-card {
+    background: $blue-gray-50;
+    border-radius: $border-radius-large;
+    .ant-card-head {
+      font-weight: 600 !important;
+      font-size: $font-size-base;
+      text-transform: capitalize;
+      border-bottom: 1px solid $blue-gray-100;
+    }
+  }
+
+  .permission-item {
+    font-size: $font-size-base;
+    margin-bottom: 20px;
+    p,
+    button {
+      display: inline;
+    }
+    button {
+      float: right;
+    }
+  }
+}

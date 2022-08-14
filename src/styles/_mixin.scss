@@ -1,0 +1,52 @@
+@import './variables';
+
+@mixin btn-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: unset;
+  border-radius: $border-radius-medium;
+  padding: 0px 24px;
+}
+@mixin btn-primary-custom($height: 40px, $fontWeight: 500) {
+  @include btn-custom;
+  background: linear-gradient(225deg, #e56c76 0%, #d8528e 100%);
+  color: $white;
+  height: $height;
+  font-weight: $fontWeight;
+}
+@mixin btn-default-custom($height: 40px, $fontWeight: 500) {
+  @include btn-custom;
+  background: $white;
+  color: $vinivia-pink-500;
+  border: 1px solid $vinivia-pink-500 !important;
+  height: $height;
+  font-weight: $fontWeight;
+}
+
+@mixin lableInput {
+  text-align: left;
+  label {
+    font-size: $font-size-tiny;
+    color: $blue-gray-700;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@mixin lableStatusDetailGroupPermission {
+  font-size: $font-size-tiny;
+  border-radius: $border-radius-small;
+  margin-left: 24px;
+  padding: 4px 16px;
+}
+
+@mixin attributePart {
+  border-radius: $border-radius-huge;
+  background-color: $white;
+  padding: 24px 24px 0;
+}

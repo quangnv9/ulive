@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixin';
+.form-select-wrapper {
+  width: 100%;
+  .ant-space-item {
+    .ant-row.ant-form-item {
+      flex-direction: column;
+      margin-bottom: 0px;
+      .ant-col.ant-form-item-label {
+        @include lableInput;
+      }
+      .ant-col.ant-form-item-control {
+        .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+          height: 56px;
+          border-radius: $border-radius-medium;
+          .ant-select-selection-item {
+            display: flex;
+            align-items: center;
+          }
+        }
+        .ant-select-arrow {
+          right: 27px;
+        }
+      }
+    }
+    width: 100%;
+  }
+}

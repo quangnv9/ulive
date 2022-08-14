@@ -1,0 +1,18 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixin';
+.group-detail {
+  .group-detail-name {
+    font-weight: 600;
+    font-size: $font-size-large;
+  }
+  .group-active-status {
+    @include lableStatusDetailGroupPermission;
+    color: $green;
+    background: $status-active;
+  }
+  .group-inactive-status {
+    @include lableStatusDetailGroupPermission;
+    color: $yellow;
+    background: $status-inactive;
+  }
+}

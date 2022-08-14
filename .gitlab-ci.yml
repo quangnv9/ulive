@@ -1,0 +1,42 @@
+# Pipeline steps list
+cache:
+  key: $CI_COMMIT_REF_SLUG # only apply for current branch
+  paths:
+    - node_modules/
+  policy: pull-push
+
+stages:
+  - install
+  - build
+  - deploy
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_REGISTRY_HOST: 071800817092.dkr.ecr.us-east-2.amazonaws.com
+  DOCKER_TLS_CERTDIR: ""
+  ENV: dev
+  APPLICATION: vin21083
+  NAMEAPP : web-dashboard
+  VERSION: $CI_COMMIT_SHORT_SHA
+  IMAGE_FIX: $DOCKER_REGISTRY_HOST/$APPLICATION:$NAMEAPP-$ENV
+  IMAGE_BACKUP: $DOCKER_REGISTRY_HOST/$APPLICATION:$NAMEAPP-$ENV-$CI_COMMIT_SHORT_SHA
+
+.Tags: &tags
+  - vops-runner
+
+.deployBranch: &deployBranch
+  - develop
+  - test
+
+installation:
+  stage: install
+  image:
+    name: quay.io/vmoteam/ci-node:v12-gitops
+  script:
+    - yarn install
+  tags: *tags
+  only: *deployBranch
+
+include:
+  - local: '/.gitlab/ci_templates/deploy_dev_jobs.yml'
+  - local: '/.gitlab/ci_templates/deploy_testing_jobs.yml'

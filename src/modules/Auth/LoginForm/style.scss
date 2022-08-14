@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+.form-area {
+    background-color: $white;
+    width: 512px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: $border-radius-huge;
+    padding: 48px 60px 24px 48px;
+    text-align: center;
+    .email {
+        margin-top: 48px !important;
+        margin-bottom: 24px !important;
+    }
+    [role='alert'] {
+        float: right;
+        font-style: italic;
+    }
+    .ant-input-affix-wrapper {
+        height: 56px;
+        border-radius: $border-radius-medium;
+    }
+    .ant-form-item-control-input {
+        svg {
+            margin: 0 18px 0 10px;
+        }
+    }
+    .forgot-password {
+        margin-top: 16px;
+    }
+    .ant-input::placeholder {
+        font-weight: lighter !important;
+    }
+    button {
+        margin: 24px 0;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}

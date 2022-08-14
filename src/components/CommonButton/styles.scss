@@ -1,0 +1,90 @@
+@import 'styles/variables';
+#primary-button {
+  background: $background-gradient;
+  border-radius: $border-radius-small;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    box-shadow: 0 4px 16px rgba(229, 108, 118, 0.5);
+  }
+  &:focus,
+  &:active {
+    background: $vinivia-pink-500;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &[disabled],
+  &[disabled]:hover {
+    color: $white;
+    background: $background-gradient;
+    opacity: 0.5;
+  }
+}
+
+#default-button {
+  border: 1px solid $vinivia-pink-500;
+  border-radius: $border-radius-small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    box-shadow: none;
+  }
+  &[disabled],
+  &[disabled]:hover {
+    background: $white;
+    opacity: 0.5;
+  }
+  span {
+    background-image: $background-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#dashed-button {
+  font-size: $font-size-normal;
+  line-height: $line-height-body;
+  border: 1px solid $blue-gray-100;
+  border-radius: $border-radius-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    box-shadow: none;
+    background: transparent !important;
+  }
+  &:focus,
+  &:active {
+    background: transparent !important;
+    border: 1px solid $blue-gray-100;
+  }
+  &[disabled],
+  &[disabled]:hover {
+    background: unset;
+    opacity: 0.5;
+  }
+}
+
+.space-small {
+  padding: 0px 20px !important;
+}
+
+.space-medium {
+  padding: 0px 24px !important;
+}
+
+.space-large {
+  padding: 0px 40px !important;
+}
+
+.reverse-icon {
+  flex-direction: row-reverse !important;
+}
+
+.custom-width {
+  width: 121px !important;
+}

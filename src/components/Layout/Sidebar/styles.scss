@@ -1,0 +1,218 @@
+@import '../../../styles/variables';
+
+section.site-layout {
+  background-color: $white !important;
+  position: absolute;
+  left: 264px;
+  top: 0;
+  width: calc(100% - 264px) !important;
+  height: 100%;
+}
+section.site-layout-collapsed {
+  background-color: $white !important;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  width: calc(100% - 100px) !important;
+  height: 100%;
+}
+
+header.ant-layout-header.site-layout-header {
+  background-color: $white;
+  height: unset;
+  line-height: unset;
+  margin-bottom: 24px;
+  padding: 24px 36px 0px 36px;
+}
+// custom css for sidebar
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger {
+  min-width: 264px !important;
+  flex: 0 0 264px !important;
+  max-width: 264px !important;
+  width: 264px !important;
+  padding-top: 50px;
+  background: $gradient;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.ant-layout-sider-has-trigger {
+  min-width: 100px !important;
+  flex: 0 0 100px !important;
+  max-width: 100px !important;
+  width: 100px !important;
+}
+.logo {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+//for arrow
+ul > li.ant-menu-submenu.ant-menu-submenu-inline.submenu-lists {
+  i.ant-menu-submenu-arrow {
+    color: $white !important;
+  }
+  &:hover {
+    i.ant-menu-submenu-arrow {
+      color: $white !important;
+    }
+  }
+}
+
+// for side-bar
+ul.ant-menu.sidebar-menu {
+  background-color: transparent !important;
+  padding: 0px 24px;
+  border: none;
+  & > li {
+    padding: 0;
+    transition: unset !important;
+    border-radius: $border-radius-small;
+  }
+
+  // for side-bar > menu-item
+  li.menu-item {
+    padding: 0px !important;
+    span.ant-menu-title-content {
+      a {
+        padding: 0px 20px !important;
+        color: $white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        span.title-menu-item {
+          font-size: $font-size-normal;
+          margin-left: 16px;
+        }
+      }
+      a.active-link {
+        background-color: $white;
+        span.title-menu-item {
+          color: $vinivia-pink-500 !important;
+        }
+        svg path {
+          fill: $vinivia-pink-500 !important;
+        }
+      }
+    }
+    &::after {
+      border: unset;
+    }
+    &:hover {
+      a {
+        background-color: $white;
+        span.title-menu-item {
+          color: $vinivia-pink-500 !important;
+        }
+        svg path {
+          fill: $vinivia-pink-500 !important;
+        }
+      }
+    }
+  }
+
+  // for side-bar > submenu
+  li.submenu-lists {
+    .ant-menu-submenu-title {
+      padding: 0px 20px !important;
+
+      span.ant-menu-title-content {
+        font-size: $font-size-normal;
+        color: $white;
+        margin-left: 16px;
+      }
+    }
+    ul.ant-menu-sub {
+      background-color: transparent;
+      li.submenu-item {
+        padding: 0 !important;
+        border-radius: $border-radius-small !important;
+        &:hover a {
+          background-color: $white;
+          span.title-menu-item {
+            color: $vinivia-pink-500 !important;
+          }
+          svg path {
+            fill: $vinivia-pink-500 !important;
+          }
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 13px 28px;
+          span.title-menu-item {
+            font-size: $font-size-normal;
+            margin-left: 16px;
+          }
+          transition: all 0.3s ease-in-out;
+        }
+        a.active-link {
+          background-color: $white !important;
+          color: $vinivia-pink-500 !important;
+          border-radius: 10px !important;
+          span.title-menu-item {
+            color: $vinivia-pink-500 !important;
+          }
+          svg path {
+            fill: $vinivia-pink-500 !important;
+          }
+        }
+        &:after {
+          border: none !important;
+        }
+      }
+    }
+  }
+}
+// end
+
+//for sidebar collapsed
+ul.ant-menu.sidebar-menu-collapsed {
+  background-color: transparent;
+  border: none;
+  padding: 0px 16px !important;
+  a.active-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border-radius: $border-radius-small;
+    span.ant-menu-item-icon {
+      background-color: $white;
+      svg path {
+        fill: $vinivia-pink-500;
+      }
+    }
+  }
+  li.menu-collapsed-item {
+    padding: 0px !important;
+    border-radius: $border-radius-small;
+    span.ant-menu-item-icon {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover span.ant-menu-item-icon {
+      background-color: $white;
+      svg path {
+        fill: $vinivia-pink-500;
+      }
+    }
+  }
+  li.ant-menu-item.ant-menu-item-active.ant-menu-item-selected.menu-collapsed-item {
+    background: transparent;
+    border-radius: $border-radius-small;
+  }
+}
+//end
+
+// hidden trigger in footer section
+.ant-layout-sider-trigger {
+  display: none;
+}

@@ -1,0 +1,101 @@
+@import 'styles/variables';
+.container-detail {
+  // position: relative;
+  margin-top: -36px;
+  .avatar-seller {
+    position: absolute;
+    max-width: 120px !important;
+    z-index: 1;
+    padding-top: 130px;
+    .avatar-image {
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+    }
+    .ant-image-mask:hover {
+      border-radius: 50%;
+    }
+    .ant-image-mask {
+      border-radius: 50%;
+    }
+    .avatar-uploader {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $blue-gray-100;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .avatar-default-by-name {
+      font-size: 40px;
+    }
+    .loading-upload-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: rgb(0 0 0 / 35%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+  }
+  .form-input .btn-wrapper .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+  }
+  .button-edit {
+    width: 120px;
+  }
+  .modified-row {
+    padding-bottom: 36px !important;
+  }
+}
+
+.cover-image-container {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  .ant-image-img.cover-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 90px;
+    z-index: 0;
+  }
+  .cover-image-uploader {
+    position: absolute;
+    left: 98%;
+    margin-top: 16px;
+  }
+  .loading-upload-cover-image {
+    position: absolute;
+    left: 48.7%;
+    margin-top: 85px;
+  }
+}
+
+.ant-row.cover-image-container {
+  .ant-image {
+    width: 100%;
+    .ant-image-mask:hover {
+      height: 200px;
+    }
+    .ant-image-mask {
+      height: 200px;
+    }
+  }
+  .ant-image-img-placeholder {
+    background-size: contain;
+  }
+}

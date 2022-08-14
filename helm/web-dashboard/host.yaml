@@ -1,0 +1,10 @@
+apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  name: {{ include "web-dashboard.fullname" . }}
+  labels:
+    {{- include "web-dashboard.labels" . | nindent 4 }}
+spec:
+  hostname: {{ .Values.mapping.host }}
+  acmeProvider:
+    email: julian@{{ .Values.mapping.host }}

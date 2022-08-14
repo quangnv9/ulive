@@ -1,0 +1,21 @@
+@import 'styles/variables';
+@import '../../../../../../styles/mixin';
+
+.priceInventoryForm {
+  @include attributePart;
+}
+
+.addIcon {
+  float: right;
+  cursor: pointer;
+}
+.addDescription {
+  font-size: $font-size-base;
+  color: $blue-gray-400;
+  text-align: center;
+}
+
+.formInputWrapper {
+  border-radius: $border-radius-medium;
+  padding: 16px;
+}
